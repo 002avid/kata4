@@ -31,7 +31,7 @@ public class TsvTitleReader implements TitleReader {
 	}
 
 	private Iterator<Title> readTitlesWith(BufferedReader reader) throws IOException {
-		return new Iterator<Title>() {
+		return new Iterator<>() {
 			String line = reader.readLine();
 
 			@Override

@@ -35,9 +35,9 @@ public class SQLiteTitleWriter implements TitleWriter{
             insertStatement.setString(3, title.primaryTitle());
             insertStatement.setString(4, title.originalTitle());
             insertStatement.setBoolean(5, title.isAdult());
-            if (title.startYear() != null)insertStatement.setInt(6, title.startYear().getValue();
-            if (title.endYear() != null)insertStatement.setInt(7, title.endYear().getValue();
-            if (title.runtimeMinutes() != null)insertStatement.setInt(8, title.runtimeMinutes();
+            if (title.startYear() != null)insertStatement.setInt(6, title.startYear().getValue());
+            if (title.endYear() != null)insertStatement.setInt(7, title.endYear().getValue());
+            if (title.runtimeMinutes() != null)insertStatement.setInt(8, title.runtimeMinutes());
             insertStatement.execute();
         } catch (SQLException e) {
             throw new IOException(e);

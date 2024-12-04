@@ -9,7 +9,7 @@ import java.util.*;
 public class TitleTypeHistogram implements Histogram {
 	private final Map<Title.TitleType, Integer> histogram;
 
-	public TitleTypeHistogram(TitleReader reader) {
+	public TitleTypeHistogram(TitleReader reader) throws IOException{
 		histogram = createHistogram(reader);
 	}
 

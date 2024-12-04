@@ -12,15 +12,14 @@ public class JFreeChartHistogramDisplay extends JPanel implements HistogramDispl
 	@Override
 	public void display(Histogram histogram) {
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-		for (String key : histogram.keys())
+		for (String key : histogram.keys()) {
 			dataset.addValue(histogram.valueOf(key), "Frequency", key);
+		}
 		JFreeChart barChart = ChartFactory.createBarChart(
 				histogram.title(),
 				"Categories",
 				"Frequency",
 				dataset);
-		ChartPanel comp = new ChartPanel(barChart);
-		comp.setSize(800,600);
-		add(comp);
+		add(new ChartPanel(barChart));
 	}
 }
